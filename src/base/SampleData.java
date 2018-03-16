@@ -31,22 +31,24 @@ public class SampleData {
 
     public static final Artist oneRepublic = new Artist("One Republic", membersOfOneRepublic, "US");
 
+    public static final Album dreamingOutLoud = new Album("Dreaming Out Loud", asList(new Track("Apologize", 208), new Track("All We Are", 268), new Track("Mercy", 241), new Track("Come Home", 158)), Collections.singletonList(oneRepublic));
+
     public static final Album wakingUp = new Album("Waking Up", asList(new Track("Good Life", 253), new Track("All This Time", 242), new Track("All the Right Moves", 237), new Track("Secrets", 224)), Collections.singletonList(oneRepublic));
 
     public static final Album aLoveSupreme = new Album("A Love Supreme", asList(new Track("Acknowledgement", 467), new Track("Resolution", 442)), Collections.singletonList(johnColtrane));
 
     public static final Album pleasePleaseMe = new Album("Please Please Me", asList(new Track("I Saw Her Standing There", 173), new Track("Misery", 108)), Collections.singletonList(theBeatles));
 
-    public static final Album sampleShortAlbum = new Album("sample Short Album", Collections.singletonList(new Track("short track", 30)), Collections.singletonList(johnColtrane));
+    public static final Album sampleShortAlbum = new Album("sample Short Album", Collections.singletonList(new Track("short track", 30)), Collections.singletonList(taylorSwift));
 
-    public static final Album manyTrackAlbum = new Album("sample Short Album", asList(new Track("short track", 30), new Track("short track 2", 30), new Track("short track 3", 30), new Track("short track 4", 30), new Track("short track 5", 30)), Collections.singletonList(johnColtrane));
+    public static final Album manyTrackAlbum = new Album("sample Short Albums", asList(new Track("short track", 30), new Track("short track 2", 30), new Track("short track 3", 30), new Track("short track 4", 30), new Track("short track 5", 30)), Collections.singletonList(taylorSwift));
 
     public static Stream<Album> getAlbums() {
         return getAlbumList().stream();
     }
 
     public static List<Album> getAlbumList() {
-        return Arrays.asList(wakingUp, aLoveSupreme, pleasePleaseMe, sampleShortAlbum, manyTrackAlbum);
+        return Arrays.asList(dreamingOutLoud, wakingUp, aLoveSupreme, pleasePleaseMe, sampleShortAlbum, manyTrackAlbum);
     }
 
     public static Stream<Artist> getArtists() {
