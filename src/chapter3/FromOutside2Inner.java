@@ -6,7 +6,7 @@ import base.SampleData;
 import java.util.Iterator;
 import java.util.List;
 
-public class fromOutside2Inner {
+public class FromOutside2Inner {
     public static void main(String[] args) {
         List<Artist> allArtists = SampleData.getArtistList();
 
@@ -15,7 +15,6 @@ public class fromOutside2Inner {
         assert 2L == fromUSArtistsUsingIterator(allArtists);
 
         assert 2L == fromUSArtistsUsingStream(allArtists);
-
     }
 
     private static long fromUSArtistsUsingFor(List<Artist> allArtists) {

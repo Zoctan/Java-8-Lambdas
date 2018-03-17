@@ -1,4 +1,4 @@
-package chapter3;
+package chapter5;
 
 import base.Album;
 import base.Artist;
@@ -12,22 +12,16 @@ import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.*;
 
-public class combineCollector {
+public class CombineCollector {
     public static void main(String[] args) {
         countArtistAlbums(SampleData.getAlbums());
         countArtistAlbumsUsingCounting(SampleData.getAlbums());
 
-        /*
-        for (Entry<Artist, List<String>> entry : getArtistAlbumsName(SampleData.getAlbums()).entrySet()) {
-            System.out.println(entry.getKey().getName() + " -> " + entry.getValue());
-        }
+        Map<Artist, List<String>> map1 = getArtistAlbumsNameUsingMapping(SampleData.getAlbums());
+        Map<Artist, List<String>> map2 = getArtistAlbumsName(SampleData.getAlbums());
+        assert map1.equals(map2);
 
-        for (Entry<Artist, List<String>> entry : getArtistAlbumsNameUsingMapping(SampleData.getAlbums()).entrySet()) {
-            System.out.println(entry.getKey().getName() + " -> " + entry.getValue());
-        }
-        */
-
-        combineCollector c = new combineCollector();
+        CombineCollector c = new CombineCollector();
         String name = SampleData.oneRepublic.getName();
         assert c.artistCache.get(name) == null;
         //Artist artist = c.getArtist(name);

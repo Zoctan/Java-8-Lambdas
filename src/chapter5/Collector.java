@@ -1,4 +1,4 @@
-package chapter3;
+package chapter5;
 
 import base.Album;
 import base.Artist;
@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.*;
 
-public class collector {
+public class Collector {
     public static void main(String[] args) {
         assert "One Republic".equals(biggestGroup(SampleData.getArtists()).get().getName());
 

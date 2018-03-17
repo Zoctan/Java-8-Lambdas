@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 
 import static java.lang.Character.isDigit;
 
-public class usefulOperation {
+public class UsefulOperation {
     public static void main(String[] args) {
         collect();
         map();
