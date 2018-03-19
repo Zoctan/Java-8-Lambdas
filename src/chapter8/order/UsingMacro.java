@@ -1,12 +1,12 @@
 package chapter8.order;
 
-public class UseMacro {
+public class UsingMacro {
     private static Editor editor = new EditorImpl();
 
     public static void main(String[] args) {
         orderMode();
         lambda();
-        method();
+        methodReference();
     }
 
     private static void orderMode() {
@@ -25,7 +25,7 @@ public class UseMacro {
         macro.run();
     }
 
-    private static void method() {
+    private static void methodReference() {
         Macro macro = new Macro();
         macro.record(editor::open);
         macro.record(editor::save);
